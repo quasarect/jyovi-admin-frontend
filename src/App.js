@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Approve from './Components/MainSection/Approve.js/Approve'
 import ExpertsList from './Components/MainSection/Experts List/ExpertsList'
 import PorfList from './Components/MainSection/Porfession List/PorfList'
+import Withdraw from './Components/MainSection/Withdraw/Withdraw'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/' element={<Approve />} />
             <Route path='/experts' element={<ExpertsList />} />
             <Route path='/professions' element={<PorfList />} />
+            <Route path='/withdrawal' element={<Withdraw />} />
           </Routes>
         </div>
       </div>
