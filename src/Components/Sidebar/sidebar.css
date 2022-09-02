@@ -1,0 +1,82 @@
+.sidebar, .sidebar-mobile {
+    position: fixed;
+    height: 100%;
+    width: 22%;
+    background-color: var(--theme-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar-phone{
+    display: none;
+}
+
+.sidebar h3{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: white;
+}
+
+.sidebar .sidebar-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.sidebar p{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sidebar-mobile {
+    width: 100%;
+    background-color: white;
+}
+
+.sidebar-mobile .sidebar-mobile-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.sidebar-mobile p {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.offcanvas-header{
+    background-color: rgb(149, 147, 147);
+    color: black;
+}
+
+.phone-view svg{
+    font-size: 30px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 500px){
+    .sidebar{
+        display: none;
+    }
+
+    .sidebar-phone{
+        display: block;
+    }
+ 
+   .offcanvas-body{
+        padding: 0 !important;
+    }
+
+}

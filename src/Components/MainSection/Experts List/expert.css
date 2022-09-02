@@ -1,0 +1,156 @@
+.experts-list-cards{
+    display: flex;
+}
+
+.expert-list h3{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+.experts-list-cards{
+    margin-top: 40px;
+}
+
+.expert-list .experts-list-cards .col-sm{
+    flex: 0 0 33%;
+}
+
+.expert-list .experts-list-cards .card{
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.expert-list .experts-list-cards .card img {
+    margin-top: 30px;
+    width: 30%;
+    border-radius: 50%;
+}
+
+.expert-list .experts-list-cards .card p {
+    text-align: center;
+}
+
+.expert-list .experts-list-cards .card .btn-primary{
+    background-color: var(--theme-color);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.modal-dialog{
+    max-width: 70% !important;
+}
+
+.modals-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modals-body img{
+    width: 20%;
+    border-radius: 50%;
+}
+
+.modals-body-text h4{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.modals-body-text .details-form{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.details-form .form-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-form .form-row .form-col {
+    flex: 0 0 50%;
+}
+
+.details-form .form-row .form-col p{
+    text-align: center;
+}
+
+.details-form .form-row .form-col span{
+    font-weight: 700;
+}
+
+.details-form .full{
+    margin-right: auto;
+    margin-left: 0px;
+}
+
+.proof-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.proof-img img{
+    width: 50%;
+}
+
+.toggle ul li{
+    display: flex;
+}
+
+.toggle ul li p{
+    text-align:initial !important;
+    margin-left: auto;
+    margin-right: 0;
+    font-weight: 600;
+    color: green;
+}
+
+.toggle{
+    margin-right:20px ;
+}
+
+.history {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 800px){
+    .expert-list .experts-list-cards .col-sm{
+        flex: 0 0 50%;
+    }
+
+    .history {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .expert-list .experts-list-cards .col-sm{
+        flex: 0 0 100%;
+    }
+
+    .modal-dialog{
+        max-width: 100% !important;
+    }
+
+    .details-form .form-row{
+        display: block;
+    }
+    .modals-body img{
+        width: 50%;
+    }
+
+    .proof-img img{
+        width: 90%;
+    }
+}

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import SideBar from './Components/Sidebar/SideBar'
+import { Routes, Route } from 'react-router-dom'
+import Approve from './Components/MainSection/Approve.js/Approve'
+import ExpertsList from './Components/MainSection/Experts List/ExpertsList'
+import PorfList from './Components/MainSection/Porfession List/PorfList'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <div className="app-row">
+        <div className="app-col1">
+          <SideBar /> 
+        </div>
+        <div className="app-col2">
+          <Routes>
+            <Route path='/' element={<Approve />} />
+            <Route path='/experts' element={<ExpertsList />} />
+            <Route path='/professions' element={<PorfList />} />
+          </Routes>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

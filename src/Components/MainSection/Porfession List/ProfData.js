@@ -1,0 +1,26 @@
+export const ProfData = [
+    {
+        id:1,
+        prof:"Neurology",
+    },
+    {
+        id:2,
+        prof:"Neurology",
+    },
+    {
+        id:3,
+        prof:"Neurology",
+    },
+    {
+        id:4,
+        prof:"Neurology",
+    },
+    {
+        id:5,
+        prof:"Neurology",
+    },
+    {
+        id:6,
+        prof:"Neurology",
+    },
+]

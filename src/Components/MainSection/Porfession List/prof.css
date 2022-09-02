@@ -1,0 +1,63 @@
+.prof-list .card {
+    padding: 20% 20% 10% 20%;
+}
+
+.prof-list .card p {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.prof-btn {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.prof-btn button {
+    width: 100px;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.prof-btn .edit {
+    background-color: var(--theme-color)
+}
+
+.prof-btn .dlt {
+    background-color: red;
+}
+
+.prof-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prof-list svg{
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 50px;
+    color: green;
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+.prof-list .experts-list-cards .card .btn-primar{
+    background-color: green !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .prof-list .experts-list-cards .col-sm {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .prof-list svg{
+        margin-top: -220px;
+    }
+}
