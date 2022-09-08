@@ -24,9 +24,8 @@ const SidebarMobile = () => {
                             <div className="sidebar-mobile-options" onClick={handleClose}>
                                 <Link to="/"><p>Requests</p></Link>
                                 <Link to="/experts"><p>Experts</p></Link>
-                                <p>Professions</p>
-                                <p>Withdrawal</p>
-
+                                <Link to="/professions"><p>Professions</p></Link>
+                                <Link to="/withdrawal"><p>Withdrawal</p></Link>
                             </div>
                         </div>
                     </Offcanvas.Body>
