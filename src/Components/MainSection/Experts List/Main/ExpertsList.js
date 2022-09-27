@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Modals from './Modal';
+import Modals from '../Switch and Modal/Modal';
 
 const ExpertsList = () => {
 
@@ -20,7 +20,7 @@ const ExpertsList = () => {
           <Row>
             {expertdata.map((data) => {
               return (
-                <Col sm>
+                <Col sm key={data.id}>
                   <Card>
                     <img src={data.img} />
                     <Card.Body>

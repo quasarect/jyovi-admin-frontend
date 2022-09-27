@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import profile from '../../../Image/profile.jpeg'
-import degree from '../../../Image/degree.png'
-import Toggle from './Toggle';
-import Toggle2 from './Toggle2';
+import profile from '../../../../Image/profile.jpeg'
+import degree from '../../../../Image/degree.png'
+import Toggle from '../Toggle/Toggle';
+import Toggle2 from '../Toggle/Toggle2';
 import Switch from './Switch';
 
 const Modals = () => {

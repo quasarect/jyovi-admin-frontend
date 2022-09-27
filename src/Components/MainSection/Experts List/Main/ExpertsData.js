@@ -1,4 +1,4 @@
-import profile from '../../../Image/profile.jpeg'
+import profile from '../../../../Image/profile.jpeg'
 
 export const ExpertsData = [
     {

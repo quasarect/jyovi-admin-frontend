@@ -5,9 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ProfData } from './ProfData';
 import './prof.css'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
-import ModalForm from './ModalForm';
-import AddForm from './AddForm';
+import ModalForm from '../Forms/ModalForm';
+import AddForm from '../Forms/AddForm';
 
 const PorfList = () => {
     const profData = ProfData;
@@ -20,7 +19,7 @@ const PorfList = () => {
                     <Row>
                         {profData.map((data) => {
                             return (
-                                <Col sm>
+                                <Col sm key={data.id}>
                                     <Card>
                                         <Card.Body>
                                             <Card.Text>
@@ -28,9 +27,9 @@ const PorfList = () => {
                                             </Card.Text>
                                         </Card.Body>
                                         <div className='prof-btn'>
-                                            <button className='edit'>
+                                            <div className='edit'>
                                                 <ModalForm />
-                                            </button>
+                                            </div>
                                             <button className='dlt'>Delete</button>
                                         </div>
                                     </Card>
