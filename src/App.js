@@ -10,11 +10,11 @@ import Withdraw from './Components/MainSection/Withdraw/Withdraw'
 const App = () => {
   return (
     <div className='app-container'>
-      <div className="app-row">
-        <div className="app-col1">
-          <SideBar /> 
+      <div className='app-row'>
+        <div className='app-col1'>
+          <SideBar />
         </div>
-        <div className="app-col2">
+        <div className='app-col2'>
           <Routes>
             <Route path='/' element={<Approve />} />
             <Route path='/experts' element={<ExpertsList />} />

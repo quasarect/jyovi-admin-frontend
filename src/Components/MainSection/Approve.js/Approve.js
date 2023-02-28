@@ -1,25 +1,79 @@
-import React from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import './approve.css'
-import { AproveData } from './AproveData'
+
+import { useNavigate } from 'react-router-dom'
+
+import { useHttpClient } from '../../../hooks/httpHook'
 
 const Approve = () => {
+  const { sendRequest } = useHttpClient()
+  const navigate = useNavigate()
+  const [requests, setRequests] = useState([])
 
-  const data = AproveData
+  const fetchRequests = useCallback(async () => {
+    try {
+      const fetched = await sendRequest('/api/admin/pending')
+
+      if (!fetched) return
+
+      if (fetched.requests && fetched.requests.length > 0) {
+        setRequests(fetched.requests)
+      }
+    } catch (err) {}
+  }, [sendRequest])
+
+  const approveRequest = async id => {
+    try {
+      const fetched = await sendRequest(
+        '/api/admin/expert/status',
+        'POST',
+        JSON.stringify({
+          status: true,
+          expertId: id,
+        }),
+        {
+          'Content-Type': 'application/json',
+        }
+      )
+
+      if (!fetched) return
+
+      navigate('/')
+    } catch (err) {}
+  }
+
+  useEffect(() => {
+    fetchRequests()
+  }, [fetchRequests])
 
   return (
     <div className='approve-section'>
       <div className='approve-container'>
         <h4>Pending Requests</h4>
-        {data.map((request) => {
+        {requests.map(request => {
           return (
-            <div key={request.id} className="approve-list">
-              <img src={request.img} />
-              <h5>{request.name}<br />
-                <span>{request.prof}</span>
+            <div key={request._id} className='approve-list'>
+              <img
+                src={
+                  process.env.REACT_APP_ENDPOINT +
+                  '/api/images/' +
+                  request.store.profileImage
+                }
+                alt='profile'
+              />
+              <h5>
+                {request.name}
+                <br />
+                <span>{request.professionalDetails.profession.name}</span>
               </h5>
               <div className='apr-btn'>
-                <button className='acc'>Accept</button>
-                <button className='rej'>Reject</button>
+                <button
+                  className='acc'
+                  onClick={() => approveRequest(request._id)}
+                >
+                  Accept
+                </button>
+                {/* <button className='rej'>Reject</button> */}
               </div>
             </div>
           )
