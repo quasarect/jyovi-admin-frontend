@@ -47,7 +47,7 @@ const ExpertsList = () => {
                     <Card.Body>
                       <Card.Title>{data.name}</Card.Title>
                       <Card.Text>
-                        {data.professionalDetails.profession.name}
+                        {data.professionalDetails.profession?.name}
                       </Card.Text>
                       <Modals id={data._id} />
                     </Card.Body>

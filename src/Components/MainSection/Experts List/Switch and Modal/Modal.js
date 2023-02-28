@@ -116,55 +116,55 @@ const Modals = ({ id }) => {
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            First Name: <span>{expert.name}</span>
+                            First Name: <span>{expert?.name}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            Email id: <span>{expert.email}</span>
+                            Email id: <span>{expert?.email}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
-                            Phone - <span>{expert.phone}</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div className='form-row'>
-                        <div className='form-col'>
-                          <p>
-                            Address - <span>{expert.address.address}</span>
-                          </p>
-                        </div>
-                        <div className='form-col'>
-                          <p>
-                            State: <span>{expert.address.state}</span>
+                            Phone - <span>{expert?.phone}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            City: <span>{expert.address.city}</span>
+                            Address - <span>{expert.address?.address}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
-                            Date of Birth: <span>{expert.dateOfBirth}</span>
+                            State: <span>{expert.address?.state}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            Gender: <span>{expert.gender}</span>
+                            City: <span>{expert.address?.city}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
-                            Language: <span>{expert.languages}</span>
+                            Date of Birth: <span>{expert?.dateOfBirth}</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className='form-row'>
+                        <div className='form-col'>
+                          <p>
+                            Gender: <span>{expert?.gender}</span>
+                          </p>
+                        </div>
+                        <div className='form-col'>
+                          <p>
+                            Language: <span>{expert?.languages}</span>
                           </p>
                         </div>
                       </div>
@@ -180,46 +180,47 @@ const Modals = ({ id }) => {
                         <div className='form-col'>
                           <p>
                             Account Number:{' '}
-                            <span>{expert.finance.bankAccountNumber}</span>
+                            <span>{expert.finance?.bankAccountNumber}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Account Name:{' '}
-                            <span>{expert.finance.bankAccountName}</span>
+                            <span>{expert.finance?.bankAccountName}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            PAN Number - <span>{expert.finance.panNumber}</span>
+                            PAN Number -{' '}
+                            <span>{expert.finance?.panNumber}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Adhaar Number -{' '}
-                            <span>{expert.finance.aadharNumber}</span>
+                            <span>{expert.finance?.aadharNumber}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col'>
                           <p>
-                            Bank Name: <span>{expert.finance.bankName}</span>
+                            Bank Name: <span>{expert.finance?.bankName}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Bank Branch Name:{' '}
-                            <span>{expert.finance.bankBranchName}</span>
+                            <span>{expert.finance?.bankBranchName}</span>
                           </p>
                         </div>
                       </div>
                       <div className='form-row'>
                         <div className='form-col full'>
                           <p>
-                            IFSC Code <span>{expert.finance.bankIFSC}</span>
+                            IFSC Code <span>{expert.finance?.bankIFSC}</span>
                           </p>
                         </div>
                       </div>
@@ -235,13 +236,13 @@ const Modals = ({ id }) => {
                         <div className='form-col'>
                           <p>
                             Degree{' '}
-                            <span>{expert.professionalDetails.degree}</span>
+                            <span>{expert.professionalDetails?.degree}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             University Name:{' '}
-                            <span>{expert.university.name}</span>
+                            <span>{expert.university?.name}</span>
                           </p>
                         </div>
                       </div>
@@ -249,14 +250,15 @@ const Modals = ({ id }) => {
                         <div className='form-col'>
                           <p>
                             University State -{' '}
-                            <span>{expert.university.state}</span>
+                            <span>{expert.university?.state}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Experience(in years) -{' '}
                             <span>
-                              {expert.professionalDetails.experienceYears} years
+                              {expert.professionalDetails?.experienceYears}{' '}
+                              years
                             </span>
                           </p>
                         </div>
@@ -266,14 +268,14 @@ const Modals = ({ id }) => {
                           <p>
                             Experience(in field){' '}
                             <span>
-                              {expert.professionalDetails.experienceField}
+                              {expert.professionalDetails?.experienceField}
                             </span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Phone or Laptop:{' '}
-                            <span>{expert.communicationDevice}</span>
+                            <span>{expert?.communicationDevice}</span>
                           </p>
                         </div>
                       </div>
@@ -281,13 +283,13 @@ const Modals = ({ id }) => {
                         <div className='form-col'>
                           <p>
                             Profession learned from:{' '}
-                            <span>{expert.professionalDetails.source}</span>
+                            <span>{expert.professionalDetails?.source}</span>
                           </p>
                         </div>
                         <div className='form-col'>
                           <p>
                             Hours Contribution daily:{' '}
-                            <span>{expert.dailyContributionHours} hours</span>
+                            <span>{expert?.dailyContributionHours} hours</span>
                           </p>
                         </div>
                       </div>
@@ -298,7 +300,7 @@ const Modals = ({ id }) => {
                         <div className='form-col'>
                           <p>
                             Minimum Earning Slab{' '}
-                            <span>{expert.earningSlab}/month</span>
+                            <span>{expert?.earningSlab}/month</span>
                           </p>
                         </div>
                       </div>
@@ -308,7 +310,7 @@ const Modals = ({ id }) => {
                             href={
                               process.env.REACT_APP_ENDPOINT +
                               '/api/docs/degrees/' +
-                              expert.store.degree
+                              expert?.store.degree
                             }
                           >
                             Degree Proof
@@ -319,7 +321,7 @@ const Modals = ({ id }) => {
                             href={
                               process.env.REACT_APP_ENDPOINT +
                               '/api/docs/experiences/' +
-                              expert.store.experience
+                              expert.store?.experience
                             }
                           >
                             Experience Proof

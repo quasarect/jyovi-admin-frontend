@@ -17,6 +17,7 @@ const Approve = () => {
       if (!fetched) return
 
       if (fetched.requests && fetched.requests.length > 0) {
+        console.log(fetched.requests)
         setRequests(fetched.requests)
       }
     } catch (err) {}
@@ -62,9 +63,9 @@ const Approve = () => {
                 alt='profile'
               />
               <h5>
-                {request.name}
+                {request?.name}
                 <br />
-                <span>{request.professionalDetails.profession.name}</span>
+                <span>{request.professionalDetails.profession?.name}</span>
               </h5>
               <div className='apr-btn'>
                 <button
